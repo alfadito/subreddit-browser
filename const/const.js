@@ -1,0 +1,1 @@
+export const SUBREDDIT_NAME = "nosleep";

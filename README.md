@@ -1,29 +1,43 @@
-# Redux Toolkit TypeScript Example
+# Subreddit Browser
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+This is a web application to browse a selected subreddit.
 
-The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
+To change subreddit, modify `/const/const.js` and change the variable `SUBREDDIT_NAME` to your chosen subreddit name.
 
-## Deploy your own
+Built using Next.js and Redux.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## How to run
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
+### Setup environment variable
 
-## How to use
+Add these variable to a `.env` file 
+```
+NEXT_PUBLIC_CLIENT_ID=[your_reddit_api_client_id]
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-redux with-redux-app
+NEXT_PUBLIC_CLIENT_SECRET=[your_reddit_api_client_secret]
 ```
 
-```bash
-yarn create next-app --example with-redux with-redux-app
+### Install dependencies
+
+```
+npm i
 ```
 
-```bash
-pnpm create next-app --example with-redux with-redux-app
+### Running dev with HMR
+
+```
+npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Running production build
+
+```
+npm run build
+npm start
+```
+
+### Running production build in container
+
+```
+docker compose up --build
+```

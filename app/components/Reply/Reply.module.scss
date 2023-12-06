@@ -1,0 +1,71 @@
+.comment {
+  margin-top: 0.5rem;
+
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    .name {
+      font-weight: bold;
+    }
+    .created {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .expandBtn {
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: bold;
+      &:hover {
+        color: #900;
+      }
+    }
+  }
+}
+
+.upvotes {
+  color: #333;
+  font-weight: bold;
+  grid-area: ups;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  .voteBtn {
+    cursor: pointer;
+    font-size: 1rem;
+    &:hover, &.active {
+      color: #900;
+    }
+  }
+}
+
+.expandable {
+  display: flex;
+  justify-content: stretch;
+  gap: 0.5rem;
+
+  .expandLine {
+    flex-shrink: 0;
+    width: 1rem;
+    display: flex;
+    justify-content: stretch;
+    cursor: pointer;
+    .line {
+      margin-left: 0.5rem;
+      border-left: 2px solid #AAA;
+    }
+
+    &:hover {
+      .line {
+        border-left-color: #900;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.banner {
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #EEE;
+  margin: 0;
+  .title {
+    margin: 0;
+  }
+  .name {
+    color: #AAA;
+  }
+}
+
+.threads {
+  display: flex;
+  justify-content: center;
+}

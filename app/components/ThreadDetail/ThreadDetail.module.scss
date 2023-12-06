@@ -1,0 +1,82 @@
+
+.headerContainer {
+  padding: 1rem;
+  background: #333;
+  color: #EEE;
+  margin: 0;
+  .back {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    &:hover {
+      color: #AAA;
+    }
+  }
+
+  .header {
+    display: grid;
+    grid-template:
+    "ups ttl" auto
+    "ups aut" auto / 4rem 1fr;
+    gap: 0.5rem;
+  }
+
+  .upvotes {
+    grid-area: ups;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #666;
+
+    .voteBtn {
+      cursor: pointer;
+      font-size: 1rem;
+      &:hover, &.active {
+        color: #900;
+      }
+    }
+  }
+
+  h1 {
+    grid-area: ttl;
+    margin: 0;
+  }
+  
+  .author {
+    grid-area: aut;
+    .name {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    .created {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.content {
+  padding: 1rem;
+  border-bottom: 1px solid #666;
+}
+
+.commentInput {
+  padding: 1rem;
+  background: #FAFAFA;
+  border-bottom: 1px solid #666;
+
+  textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    border: 1px solid #666;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.replies {
+  padding: 1rem;
+  background: #FFF;
+}

@@ -1,0 +1,99 @@
+.container {
+  display: grid;
+  
+  .upvotes {
+    background: #F8F8F8;
+    color: #333;
+    font-weight: bold;
+    grid-area: ups;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+
+    .voteBtn {
+      font-size: 1.5rem;
+      &:hover, &.active {
+        color: #900;
+      }
+    }
+  }
+
+  .author {
+    color: #666;
+    grid-area: aut;
+    font-size: 0.9rem;
+    .name {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    .created {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .title {
+    grid-area: ttl;
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .comments {
+    color: #666;
+    grid-area: cmt;
+    &::before {
+      content:"💬";
+      margin-right: 0.25rem;
+    }
+    &::after {
+      content: "comments";
+      margin-left: 0.25rem;
+    }
+  }
+
+  &.card {
+    grid-template:
+    "ups aut" auto
+    "ups ttl" auto
+    "ups cmt" auto / 5rem 1fr;
+    gap: 0.25rem;
+  }
+
+  &.classic {
+    grid-template:
+    "ups ttl" auto
+    "ups aut" auto
+    "ups cmt" auto / 5rem 1fr;
+    gap: 0.25rem;
+    .title {
+      font-size: 1.1rem;
+    }
+  }
+
+  &.compact {
+    grid-template:
+    "ups ttl cmt" auto
+    "ups aut cmt" auto / 8rem 1fr 6rem;
+
+    .title {
+      font-size: 1.1rem;
+    }
+
+    .upvotes {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
+    .comments {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: bold;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
